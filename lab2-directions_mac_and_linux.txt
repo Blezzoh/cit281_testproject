@@ -1,0 +1,94 @@
+Part I:
+1. it is probably good to open vs code in the directory cit281/p2 so that you can see the changes 
+in real time
+2. open the terminal in cit281/p2
+  -> -  if you don't know where you are in the terminal use 
+    "> pwd"
+    it will show you where you are, and use appropriate "cd" to got to 
+    -  or open finder and go to cit/p2, right click and select open terminal in this folder
+  -> lastly  "> mkdir lab-02" and "> git init". The message will say that it just created a git repository
+  -> play with "ls .git" to see the output
+
+Part II:
+1. Necessary things to know about directories(folders)
+    "ls .": the dot means in this current location. This is the same as just "ls". 
+    "ls ..": the two dots means one directory backwards. so if I was in cit281/p2/lab-02/, it will list
+             everything in cit281/p2
+     "ls ../../: now it is two directories backwards. It will print what is in cit281/.
+     "cp <origin/filename> <destination>: cp copies from <origin> the filename in the <destination>
+     "mv <filname> <newfilename>: renames the <filename> to <newfilename>.
+2. Assume that I was in cit281/p2/lab-02/. this is how I will copy the file: 
+"> cp ../../p1/lab-01/lab-02-node.js ." or ""> cp ../../p1/lab-01/lab-02-node.js".
+The terminal assume that if you don't put <destination>, you want to copy the file in the current directory.
+
+3. Now use "cp" according to where you are and use the "mv" command to rename appropriately. check you vscode 
+to see if the changes are reflected. 
+
+Part III: 
+1. After you do a git init you files in that directory are in three statuses:
+    - untracted: File that have not been staged i.e you never did "git add <filename>" to that file
+    - tracked: File that are staged somehow i.e you did a "git add <filename> on them"
+    - ignored: files or directories in ".gitignore"
+    Tracked files:
+    - staged: files that have are tracked using "git add" and have not been modified since using this command. 
+    - changed: files that have are tracked using "git add" and have been modified since using this command. 
+    - committed: files that have committed to the repository(I know use the same work). Google this to 
+    understand it more. 
+2. use "git add" and "git commit" according to the directions in Part III. 
+
+Part IV: 
+1. this part talks specifically about ".gitignore" and other git commands. 
+ - this file list files and/or directories that shouldn't be tracked where each occupies one line of the files
+    example: assume my .gitignore looked like this. 
+    lab2.js
+    libraries/
+
+    ->lab2.js and everything in the libraries folders will be ignored
+ - "#" sign is a comment sign in .gitignore file
+ 2. create the two files "ignore.txt" and ".gitignore" and add the appropriate text to them according 
+ to the directions.
+ 3. you can use vscode or the terminal to create the files. If you are using the terminal:
+ > touch file.txt
+ this command will create a file.txt in the current folder. 
+
+ 5. git commands: 
+ - git status: show tracked, untracked files. Additionnally, it shows tracked files that are staged or modified.
+                Ignored files are not displayed
+ - git add <filenames>: 
+    examples:
+    git add file1.txt file2.txt: will stage the two files
+    git add *: stages everything in that directory except the ignored files. * is a wildcard and is explained
+                in part 6
+    git add file.txt: stages the one file
+    git commit -m "<message>": committs all staged files
+    git log: display informations about the commits. Accepts flags(something like "--<flagname>")
+
+Part V:
+1. Read about "git diff" synopsis in this part and try it. In short, 
+it display the changes to any tracked files i.e shows modifications to tracked files. 
+2. Change lab-02-node.js according to directions and use git diff to try this. 
+
+Part VI:
+1. This part talks about the wild "*". Read the synopsis, it explains it. 
+    git add "*.js": stages everything with an extension ".js"
+    git add "lib/*": stages everything in the lib/ folder.
+2. Do everything according to the directions
+
+Part VII:
+1. This part talk about cloning a repository online to your own computer.
+    git clone <url>: clones the repository on the url in the current directory.
+2. follow the directions in this part. NOTE: "cd .." so that the HangmanGame is not in your lab-02 folder.
+
+Part VIII:
+1. This part talks about part git branch. More in the lab 2 page. 
+
+Part IX:
+1. This part talks "git ls-files". Read more in the lab 2 page.
+2. Follow the instructions in the lab 2 page. NOTE: you should do this in you lab-02 folder. 
+
+PART X:
+Talks about submissions
+
+
+
+
